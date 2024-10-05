@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class = "active" ><a href = "#">Study</a></li>
+            <li><a href="biograf.html">Biografy</a></li>
+        </ul>
+    </header>
+<div class = "home">
+    <h1 class = 'title '>Сағат Әбдyғалиев</h1>
+
+    <ul class = sg >
+        <li id="section1"><a href ="biograf.html"> Биография </a></li>
+        <li id="section2"><a href ="info4.html"> Mетафора</a></li>
+        <li id="section3" ><a href ="info3.html"> Ажарлау</a></li>
+        <li id="section4" ><a href ="info2.html"> Кейіптеу</a></li>
+        <li id="section5" ><a href ="info1.html">Символ</a></li>
+        <li id="section6"><a href = "info.html">Арнау</a></li>
+    </ul>
+
+    <style>
+
+            @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body{
+    background-color: #2e2e2e;
+    font-family: monospace;
+    margin: 0;
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid #fff4;
+}
+header ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    font-size: 40px;
+}
+header li, a{
+    padding: 30px 40px;
+    color: #fff;
+    text-decoration: none;
+}
+header li.active, header li:hover{
+    border-bottom: 2px solid #fff;
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #a37023;
+    overflow: hidden;
+}
+
+.home::before{
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: #cca55d;
+}
+
+.sg{
+    color: white;
+    position: absolute;
+    font-size: 35px;
+    margin-left:  20px;
+}
+
+.sg li{
+    margin-top: 20px;
+    font-family: cursive;
+    font-size: larger;
+}
+
+.highlight {
+    text-decoration: underline;
+}
+   
+</style>
+
+<script>
+    window.onload = function() {
+        let selected = localStorage.getItem("selectedButton");
+
+        if (selected) {
+            document.getElementById(selected).classList.add("highlight");
+            localStorage.removeItem("selectedButton");
+        }
+    };
+</script>
+
+
+</body>
+</html>
